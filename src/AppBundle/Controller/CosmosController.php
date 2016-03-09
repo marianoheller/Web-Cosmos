@@ -11,7 +11,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class CosmosController extends Controller
 {
 	/**
-	 * @Route("/{indexVar}", requirements={"indexVar"= "index|index.html"} )
+	 * @Route(	"/{path}.{_format}",
+	 			defaults = { "_format":"html"},
+				requirements={
+					"path"= "index|cosmos",
+					"_format" = "html"
+	 			} 
+	 		)
 	 */
 	public function indexCosmicAction()
    {
@@ -22,7 +28,12 @@ class CosmosController extends Controller
 	}
 
 	/**
-	 * @Route("/{indexVar}", requirements={"indexVar"= "gallery|gallery.html"} )
+	 * @Route(	"/{path}.{_format}",
+	 			defaults={"_format":"html"},
+	 			requirements={
+	 				"path"= "gallery"
+	 			} 
+	 		)
 	 */
 	public function indexGalleryAction()
    {
@@ -33,7 +44,12 @@ class CosmosController extends Controller
 	}
 
 	/**
-	 * @Route("/{indexVar}", requirements={"indexVar"= "contact|contact.html"} )
+	 * @Route(	"/{path}.{_format}",
+	 			defaults={"_format":"html"},
+	 			requirements={
+	 				"path"= "contact"
+	 			} 
+	 		)
 	 */
 	public function indexContactAction()
    {
@@ -44,7 +60,12 @@ class CosmosController extends Controller
 	}
 
 	/**
-	 * @Route("/{indexVar}", requirements={"indexVar"= "blog|blog.html"} )
+	 * @Route("	/{path}.{_format}",
+				defaults={"_format":"html"},
+	 			requirements={
+	 				"path"= "blog"
+	 			} 
+	 		)
 	 */
 	public function indexBlogAction()
    {
@@ -55,7 +76,12 @@ class CosmosController extends Controller
 	}
 
 	/**
-	 * @Route("/{indexVar}", requirements={"indexVar"= "about|about.html"} )
+	 * @Route("	/{path}.{_format}",
+	 			defaults = {"_format":"html"},
+	 			requirements={
+	 				"path"= "about"
+	 			} 
+	 		)
 	 */
 	public function indexAboutAction()
    {
